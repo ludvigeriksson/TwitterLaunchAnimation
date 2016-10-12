@@ -18,7 +18,7 @@ or
 
 You must pass the current window as a parameter to a function
 
-## Realy Twitter Laucnh animation?
+## Realy Twitter Launсh animation?
 Twitter developers use intuitive animation: first, the logo is compressed further - increasing. To animation was look good should be used timing curves. But the standard curve did not give a result similar to the real laucnh animation. Experimentally, I've found the correct curve
 
 <img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - compare.gif" width="400">
