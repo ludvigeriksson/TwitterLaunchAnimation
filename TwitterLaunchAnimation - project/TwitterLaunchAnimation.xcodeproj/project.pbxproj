@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F40981071DAC176A006E1C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981061DAC176A006E1C03 /* AppDelegate.swift */; };
+		F40981091DAC176A006E1C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981081DAC176A006E1C03 /* ViewController.swift */; };
+		F409810C1DAC176A006E1C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F409810A1DAC176A006E1C03 /* Main.storyboard */; };
+		F409810E1DAC176A006E1C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F409810D1DAC176A006E1C03 /* Assets.xcassets */; };
+		F409819A1DAC2886006E1C03 /* SPAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981681DAC2886006E1C03 /* SPAnimation.swift */; };
+		F409819B1DAC2886006E1C03 /* SPAnimationSpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981691DAC2886006E1C03 /* SPAnimationSpring.swift */; };
+		F409819C1DAC2886006E1C03 /* SPAnimationUpward.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409816A1DAC2886006E1C03 /* SPAnimationUpward.swift */; };
+		F409819D1DAC2886006E1C03 /* SPAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409816C1DAC2886006E1C03 /* SPAudioPlayer.swift */; };
+		F409819E1DAC2886006E1C03 /* SPUIColorExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409816E1DAC2886006E1C03 /* SPUIColorExtenshion.swift */; };
+		F409819F1DAC2886006E1C03 /* SPConstraintsAssistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981701DAC2886006E1C03 /* SPConstraintsAssistent.swift */; };
+		F40981A01DAC2886006E1C03 /* SPDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981721DAC2886006E1C03 /* SPDelay.swift */; };
+		F40981A11DAC2886006E1C03 /* SPUIDeviceExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981741DAC2886006E1C03 /* SPUIDeviceExtenshion.swift */; };
+		F40981A21DAC2886006E1C03 /* SPBezierPathFigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981771DAC2886006E1C03 /* SPBezierPathFigure.swift */; };
+		F40981A31DAC2886006E1C03 /* SPUIImageExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981791DAC2886006E1C03 /* SPUIImageExtenshion.swift */; };
+		F40981A41DAC2886006E1C03 /* SPInternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409817B1DAC2886006E1C03 /* SPInternetConnection.swift */; };
+		F40981A61DAC2886006E1C03 /* SPLaunchAnimationTwitterExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981801DAC2886006E1C03 /* SPLaunchAnimationTwitterExtenshion.swift */; };
+		F40981A71DAC2886006E1C03 /* TwitterLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40981811DAC2886006E1C03 /* TwitterLaunchScreen.storyboard */; };
+		F40981A81DAC2886006E1C03 /* TwitterMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40981821DAC2886006E1C03 /* TwitterMedia.xcassets */; };
+		F40981A91DAC2886006E1C03 /* SPRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981841DAC2886006E1C03 /* SPRandom.swift */; };
+		F40981AA1DAC2886006E1C03 /* SPIconsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981871DAC2886006E1C03 /* SPIconsButton.swift */; };
+		F40981AB1DAC2886006E1C03 /* SPLinesCircleButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981881DAC2886006E1C03 /* SPLinesCircleButtonsView.swift */; };
+		F40981AC1DAC2886006E1C03 /* SPRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981891DAC2886006E1C03 /* SPRoundButton.swift */; };
+		F40981AD1DAC2886006E1C03 /* SPGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409818B1DAC2886006E1C03 /* SPGradientViewController.swift */; };
+		F40981AE1DAC2886006E1C03 /* SPPageItemsScallingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409818C1DAC2886006E1C03 /* SPPageItemsScallingViewController.swift */; };
+		F40981AF1DAC2886006E1C03 /* SPUIViewExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409818D1DAC2886006E1C03 /* SPUIViewExtenshion.swift */; };
+		F40981B01DAC2886006E1C03 /* SPCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981911DAC2886006E1C03 /* SPCollectionViewCell.swift */; };
+		F40981B11DAC2886006E1C03 /* SPPageItemsScalingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981931DAC2886006E1C03 /* SPPageItemsScalingCollectionView.swift */; };
+		F40981B21DAC2886006E1C03 /* SPPageItemsScalingCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981951DAC2886006E1C03 /* SPPageItemsScalingCollectionLayout.swift */; };
+		F40981B31DAC2886006E1C03 /* SPBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981971DAC2886006E1C03 /* SPBlurView.swift */; };
+		F40981B41DAC2886006E1C03 /* SPGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981981DAC2886006E1C03 /* SPGradientView.swift */; };
+		F40981B51DAC2886006E1C03 /* SPUILabelExtenshion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40981991DAC2886006E1C03 /* SPUILabelExtenshion.swift */; };
+		F46B53201DACFCC500694C4B /* SPLaunchAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B531F1DACFCC500694C4B /* SPLaunchAnimation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F40981031DAC176A006E1C03 /* TwitterLaunchAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterLaunchAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40981061DAC176A006E1C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F40981081DAC176A006E1C03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F409810B1DAC176A006E1C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F409810D1DAC176A006E1C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F40981121DAC176A006E1C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F40981681DAC2886006E1C03 /* SPAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAnimation.swift; sourceTree = "<group>"; };
+		F40981691DAC2886006E1C03 /* SPAnimationSpring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAnimationSpring.swift; sourceTree = "<group>"; };
+		F409816A1DAC2886006E1C03 /* SPAnimationUpward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAnimationUpward.swift; sourceTree = "<group>"; };
+		F409816C1DAC2886006E1C03 /* SPAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAudioPlayer.swift; sourceTree = "<group>"; };
+		F409816E1DAC2886006E1C03 /* SPUIColorExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUIColorExtenshion.swift; sourceTree = "<group>"; };
+		F40981701DAC2886006E1C03 /* SPConstraintsAssistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConstraintsAssistent.swift; sourceTree = "<group>"; };
+		F40981721DAC2886006E1C03 /* SPDelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDelay.swift; sourceTree = "<group>"; };
+		F40981741DAC2886006E1C03 /* SPUIDeviceExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUIDeviceExtenshion.swift; sourceTree = "<group>"; };
+		F40981771DAC2886006E1C03 /* SPBezierPathFigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPBezierPathFigure.swift; sourceTree = "<group>"; };
+		F40981791DAC2886006E1C03 /* SPUIImageExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUIImageExtenshion.swift; sourceTree = "<group>"; };
+		F409817B1DAC2886006E1C03 /* SPInternetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInternetConnection.swift; sourceTree = "<group>"; };
+		F40981801DAC2886006E1C03 /* SPLaunchAnimationTwitterExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLaunchAnimationTwitterExtenshion.swift; sourceTree = "<group>"; };
+		F40981811DAC2886006E1C03 /* TwitterLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TwitterLaunchScreen.storyboard; sourceTree = "<group>"; };
+		F40981821DAC2886006E1C03 /* TwitterMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TwitterMedia.xcassets; sourceTree = "<group>"; };
+		F40981841DAC2886006E1C03 /* SPRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPRandom.swift; sourceTree = "<group>"; };
+		F40981871DAC2886006E1C03 /* SPIconsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPIconsButton.swift; sourceTree = "<group>"; };
+		F40981881DAC2886006E1C03 /* SPLinesCircleButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLinesCircleButtonsView.swift; sourceTree = "<group>"; };
+		F40981891DAC2886006E1C03 /* SPRoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPRoundButton.swift; sourceTree = "<group>"; };
+		F409818B1DAC2886006E1C03 /* SPGradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPGradientViewController.swift; sourceTree = "<group>"; };
+		F409818C1DAC2886006E1C03 /* SPPageItemsScallingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPPageItemsScallingViewController.swift; sourceTree = "<group>"; };
+		F409818D1DAC2886006E1C03 /* SPUIViewExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUIViewExtenshion.swift; sourceTree = "<group>"; };
+		F40981911DAC2886006E1C03 /* SPCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPCollectionViewCell.swift; sourceTree = "<group>"; };
+		F40981931DAC2886006E1C03 /* SPPageItemsScalingCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPPageItemsScalingCollectionView.swift; sourceTree = "<group>"; };
+		F40981951DAC2886006E1C03 /* SPPageItemsScalingCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPPageItemsScalingCollectionLayout.swift; sourceTree = "<group>"; };
+		F40981971DAC2886006E1C03 /* SPBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPBlurView.swift; sourceTree = "<group>"; };
+		F40981981DAC2886006E1C03 /* SPGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPGradientView.swift; sourceTree = "<group>"; };
+		F40981991DAC2886006E1C03 /* SPUILabelExtenshion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUILabelExtenshion.swift; sourceTree = "<group>"; };
+		F46B531F1DACFCC500694C4B /* SPLaunchAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLaunchAnimation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F40981001DAC176A006E1C03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F40980FA1DAC176A006E1C03 = {
+			isa = PBXGroup;
+			children = (
+				F40981051DAC176A006E1C03 /* TwitterLaunchAnimation */,
+				F40981041DAC176A006E1C03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F40981041DAC176A006E1C03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F40981031DAC176A006E1C03 /* TwitterLaunchAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F40981051DAC176A006E1C03 /* TwitterLaunchAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F40981661DAC2886006E1C03 /* Sparrow */,
+				F40981061DAC176A006E1C03 /* AppDelegate.swift */,
+				F40981081DAC176A006E1C03 /* ViewController.swift */,
+				F409810A1DAC176A006E1C03 /* Main.storyboard */,
+				F409810D1DAC176A006E1C03 /* Assets.xcassets */,
+				F40981121DAC176A006E1C03 /* Info.plist */,
+			);
+			path = TwitterLaunchAnimation;
+			sourceTree = "<group>";
+		};
+		F40981661DAC2886006E1C03 /* Sparrow */ = {
+			isa = PBXGroup;
+			children = (
+				F40981671DAC2886006E1C03 /* Animation */,
+				F409816B1DAC2886006E1C03 /* Audio */,
+				F409816D1DAC2886006E1C03 /* Color */,
+				F409816F1DAC2886006E1C03 /* Constraints */,
+				F40981711DAC2886006E1C03 /* Delay */,
+				F40981731DAC2886006E1C03 /* Device */,
+				F40981751DAC2886006E1C03 /* Figure */,
+				F40981781DAC2886006E1C03 /* Image */,
+				F409817A1DAC2886006E1C03 /* InternetConnection */,
+				F409817C1DAC2886006E1C03 /* Launch */,
+				F40981831DAC2886006E1C03 /* Random */,
+				F40981851DAC2886006E1C03 /* UI */,
+			);
+			path = Sparrow;
+			sourceTree = "<group>";
+		};
+		F40981671DAC2886006E1C03 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				F40981681DAC2886006E1C03 /* SPAnimation.swift */,
+				F40981691DAC2886006E1C03 /* SPAnimationSpring.swift */,
+				F409816A1DAC2886006E1C03 /* SPAnimationUpward.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		F409816B1DAC2886006E1C03 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				F409816C1DAC2886006E1C03 /* SPAudioPlayer.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		F409816D1DAC2886006E1C03 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				F409816E1DAC2886006E1C03 /* SPUIColorExtenshion.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		F409816F1DAC2886006E1C03 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				F40981701DAC2886006E1C03 /* SPConstraintsAssistent.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		F40981711DAC2886006E1C03 /* Delay */ = {
+			isa = PBXGroup;
+			children = (
+				F40981721DAC2886006E1C03 /* SPDelay.swift */,
+			);
+			path = Delay;
+			sourceTree = "<group>";
+		};
+		F40981731DAC2886006E1C03 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				F40981741DAC2886006E1C03 /* SPUIDeviceExtenshion.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		F40981751DAC2886006E1C03 /* Figure */ = {
+			isa = PBXGroup;
+			children = (
+				F40981761DAC2886006E1C03 /* BezierPathFigure */,
+			);
+			path = Figure;
+			sourceTree = "<group>";
+		};
+		F40981761DAC2886006E1C03 /* BezierPathFigure */ = {
+			isa = PBXGroup;
+			children = (
+				F40981771DAC2886006E1C03 /* SPBezierPathFigure.swift */,
+			);
+			path = BezierPathFigure;
+			sourceTree = "<group>";
+		};
+		F40981781DAC2886006E1C03 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F40981791DAC2886006E1C03 /* SPUIImageExtenshion.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		F409817A1DAC2886006E1C03 /* InternetConnection */ = {
+			isa = PBXGroup;
+			children = (
+				F409817B1DAC2886006E1C03 /* SPInternetConnection.swift */,
+			);
+			path = InternetConnection;
+			sourceTree = "<group>";
+		};
+		F409817C1DAC2886006E1C03 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				F409817D1DAC2886006E1C03 /* Animation */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		F409817D1DAC2886006E1C03 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				F46B531F1DACFCC500694C4B /* SPLaunchAnimation.swift */,
+				F409817E1DAC2886006E1C03 /* asTwitter */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		F409817E1DAC2886006E1C03 /* asTwitter */ = {
+			isa = PBXGroup;
+			children = (
+				F40981801DAC2886006E1C03 /* SPLaunchAnimationTwitterExtenshion.swift */,
+				F40981811DAC2886006E1C03 /* TwitterLaunchScreen.storyboard */,
+				F40981821DAC2886006E1C03 /* TwitterMedia.xcassets */,
+			);
+			path = asTwitter;
+			sourceTree = "<group>";
+		};
+		F40981831DAC2886006E1C03 /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				F40981841DAC2886006E1C03 /* SPRandom.swift */,
+			);
+			path = Random;
+			sourceTree = "<group>";
+		};
+		F40981851DAC2886006E1C03 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F40981861DAC2886006E1C03 /* Buttons */,
+				F409818A1DAC2886006E1C03 /* Controllers */,
+				F409818D1DAC2886006E1C03 /* SPUIViewExtenshion.swift */,
+				F409818E1DAC2886006E1C03 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F40981861DAC2886006E1C03 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F40981871DAC2886006E1C03 /* SPIconsButton.swift */,
+				F40981881DAC2886006E1C03 /* SPLinesCircleButtonsView.swift */,
+				F40981891DAC2886006E1C03 /* SPRoundButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F409818A1DAC2886006E1C03 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F409818B1DAC2886006E1C03 /* SPGradientViewController.swift */,
+				F409818C1DAC2886006E1C03 /* SPPageItemsScallingViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F409818E1DAC2886006E1C03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F409818F1DAC2886006E1C03 /* CollectionViews */,
+				F40981961DAC2886006E1C03 /* Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F409818F1DAC2886006E1C03 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				F40981901DAC2886006E1C03 /* Cells */,
+				F40981921DAC2886006E1C03 /* CollectionViews */,
+				F40981941DAC2886006E1C03 /* Layouts */,
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		F40981901DAC2886006E1C03 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F40981911DAC2886006E1C03 /* SPCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F40981921DAC2886006E1C03 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				F40981931DAC2886006E1C03 /* SPPageItemsScalingCollectionView.swift */,
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		F40981941DAC2886006E1C03 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				F40981951DAC2886006E1C03 /* SPPageItemsScalingCollectionLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		F40981961DAC2886006E1C03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F40981971DAC2886006E1C03 /* SPBlurView.swift */,
+				F40981981DAC2886006E1C03 /* SPGradientView.swift */,
+				F40981991DAC2886006E1C03 /* SPUILabelExtenshion.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F40981021DAC176A006E1C03 /* TwitterLaunchAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F40981151DAC176A006E1C03 /* Build configuration list for PBXNativeTarget "TwitterLaunchAnimation" */;
+			buildPhases = (
+				F40980FF1DAC176A006E1C03 /* Sources */,
+				F40981001DAC176A006E1C03 /* Frameworks */,
+				F40981011DAC176A006E1C03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwitterLaunchAnimation;
+			productName = TwitterLaunchAnimation;
+			productReference = F40981031DAC176A006E1C03 /* TwitterLaunchAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F40980FB1DAC176A006E1C03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Ivan Vorobei";
+				TargetAttributes = {
+					F40981021DAC176A006E1C03 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MNM2TM9G7C;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F40980FE1DAC176A006E1C03 /* Build configuration list for PBXProject "TwitterLaunchAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F40980FA1DAC176A006E1C03;
+			productRefGroup = F40981041DAC176A006E1C03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F40981021DAC176A006E1C03 /* TwitterLaunchAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F40981011DAC176A006E1C03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40981A81DAC2886006E1C03 /* TwitterMedia.xcassets in Resources */,
+				F409810E1DAC176A006E1C03 /* Assets.xcassets in Resources */,
+				F409810C1DAC176A006E1C03 /* Main.storyboard in Resources */,
+				F40981A71DAC2886006E1C03 /* TwitterLaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F40980FF1DAC176A006E1C03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F409819F1DAC2886006E1C03 /* SPConstraintsAssistent.swift in Sources */,
+				F40981A31DAC2886006E1C03 /* SPUIImageExtenshion.swift in Sources */,
+				F40981AB1DAC2886006E1C03 /* SPLinesCircleButtonsView.swift in Sources */,
+				F40981B31DAC2886006E1C03 /* SPBlurView.swift in Sources */,
+				F40981A41DAC2886006E1C03 /* SPInternetConnection.swift in Sources */,
+				F40981B51DAC2886006E1C03 /* SPUILabelExtenshion.swift in Sources */,
+				F409819B1DAC2886006E1C03 /* SPAnimationSpring.swift in Sources */,
+				F40981A21DAC2886006E1C03 /* SPBezierPathFigure.swift in Sources */,
+				F40981AA1DAC2886006E1C03 /* SPIconsButton.swift in Sources */,
+				F40981A01DAC2886006E1C03 /* SPDelay.swift in Sources */,
+				F40981AD1DAC2886006E1C03 /* SPGradientViewController.swift in Sources */,
+				F40981AF1DAC2886006E1C03 /* SPUIViewExtenshion.swift in Sources */,
+				F409819C1DAC2886006E1C03 /* SPAnimationUpward.swift in Sources */,
+				F40981AE1DAC2886006E1C03 /* SPPageItemsScallingViewController.swift in Sources */,
+				F40981A61DAC2886006E1C03 /* SPLaunchAnimationTwitterExtenshion.swift in Sources */,
+				F409819D1DAC2886006E1C03 /* SPAudioPlayer.swift in Sources */,
+				F46B53201DACFCC500694C4B /* SPLaunchAnimation.swift in Sources */,
+				F40981091DAC176A006E1C03 /* ViewController.swift in Sources */,
+				F40981071DAC176A006E1C03 /* AppDelegate.swift in Sources */,
+				F409819E1DAC2886006E1C03 /* SPUIColorExtenshion.swift in Sources */,
+				F40981B41DAC2886006E1C03 /* SPGradientView.swift in Sources */,
+				F40981A91DAC2886006E1C03 /* SPRandom.swift in Sources */,
+				F40981B11DAC2886006E1C03 /* SPPageItemsScalingCollectionView.swift in Sources */,
+				F409819A1DAC2886006E1C03 /* SPAnimation.swift in Sources */,
+				F40981A11DAC2886006E1C03 /* SPUIDeviceExtenshion.swift in Sources */,
+				F40981B01DAC2886006E1C03 /* SPCollectionViewCell.swift in Sources */,
+				F40981B21DAC2886006E1C03 /* SPPageItemsScalingCollectionLayout.swift in Sources */,
+				F40981AC1DAC2886006E1C03 /* SPRoundButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F409810A1DAC176A006E1C03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F409810B1DAC176A006E1C03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F40981131DAC176A006E1C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F40981141DAC176A006E1C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F40981161DAC176A006E1C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MNM2TM9G7C;
+				INFOPLIST_FILE = TwitterLaunchAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.TwitterLaunchAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F40981171DAC176A006E1C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MNM2TM9G7C;
+				INFOPLIST_FILE = TwitterLaunchAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.TwitterLaunchAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F40980FE1DAC176A006E1C03 /* Build configuration list for PBXProject "TwitterLaunchAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40981131DAC176A006E1C03 /* Debug */,
+				F40981141DAC176A006E1C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F40981151DAC176A006E1C03 /* Build configuration list for PBXNativeTarget "TwitterLaunchAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40981161DAC176A006E1C03 /* Debug */,
+				F40981171DAC176A006E1C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F40980FB1DAC176A006E1C03 /* Project object */;
+}
