@@ -3,7 +3,7 @@
 ## About
 Project with launch animation of Twitter. On GitHub many projects, but this is very similar to the original animation
 
-<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - preview.gif" width="500">
+<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - mockup_preview.gif" width="600">
 
 ## How use
 Add some lines code in AppDelegate file:
