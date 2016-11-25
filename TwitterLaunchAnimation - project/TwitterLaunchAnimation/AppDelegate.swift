@@ -17,11 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let twitterLogoBezierPath = SPBezierPathFigure.logoTwitter()
-        //let twitterLogoImage = UIImage.init(named: "twitter-logo")!
-        
-        //SPLaunchAnimation.asTwitter(icon: twitterLogoImage, onWindow: self.window!)
-        
         SPLaunchAnimation.asTwitter(icon: twitterLogoBezierPath, onWindow: self.window!)
+        
+        //let twitterLogoImage = UIImage.init(named: "twitter-logo")!
+        //SPLaunchAnimation.asTwitter(icon: twitterLogoImage, onWindow: self.window!)
         
         return true
     }

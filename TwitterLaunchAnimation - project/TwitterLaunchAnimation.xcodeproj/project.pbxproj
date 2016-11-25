@@ -239,9 +239,9 @@
 		F409817E1DAC2886006E1C03 /* asTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				F40981821DAC2886006E1C03 /* TwitterMedia.xcassets */,
 				F40981801DAC2886006E1C03 /* SPLaunchAnimationTwitterExtenshion.swift */,
 				F40981811DAC2886006E1C03 /* TwitterLaunchScreen.storyboard */,
-				F40981821DAC2886006E1C03 /* TwitterMedia.xcassets */,
 			);
 			path = asTwitter;
 			sourceTree = "<group>";

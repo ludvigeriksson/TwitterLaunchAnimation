@@ -39,8 +39,8 @@ TwitterLaunchAnimation-project is released under the MIT license. See LICENSE.md
 
 ## Contact:
  
-[http://hello.ivanorobei.by](http://hello.ivanorobei.by)
+[http://hello.ivanorobei.by](http://hello.ivanvorobei.by)
 
-[http://ivanorobei.by](http://hello.ivanorobei.by)
+[http://ivanorobei.by](http://hello.ivanvorobei.by)
 
 hello@ivanvorobei.by
