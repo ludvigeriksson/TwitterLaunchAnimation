@@ -94,3 +94,21 @@ public extension UIDevice {
         return Model.unrecognized
     }
 }
+
+
+
+public extension UIDevice {
+    
+    public enum deviceOrientation {
+        case Portrait
+        case Landscape
+    }
+    
+    func isPortraitOrientation() -> Bool {
+        if (UIDeviceOrientationIsPortrait(UIDevice.current.orientation)) {
+            return true
+        } else {
+            return false
+        }
+    }
+}

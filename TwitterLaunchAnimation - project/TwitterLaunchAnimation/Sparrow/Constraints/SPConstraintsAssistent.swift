@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SPConstraintsAssistent: NSObject {
+struct SPConstraintsAssistent {
     
     static func setEqualSizeConstraint(_ subView: UIView, superVuew: UIView) {
         subView.translatesAutoresizingMaskIntoConstraints = false;
