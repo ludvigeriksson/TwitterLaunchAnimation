@@ -59,4 +59,4 @@ TwitterLaunchAnimation-project is released under the MIT license. See LICENSE.md
 hello@ivanvorobei.by
 
 ## Support
-The project is fully free, I do not impose any restrictions on its use. I'm just like you - want to do useful things. If you have a desire to help - you can tell friends about the project or [donate](http://hello.ivanvorobei.by). Thank!
+The project is fully free, I do not impose any restrictions on its use. I'm just like you - want to do useful things. If you have a desire to help - you can tell friends about the project or [donate](http://ivanvorobei.by/donate). Thank!
