@@ -46,10 +46,9 @@ extension SPLaunchAnimation {
     static func asTwitter(
         forLaunchScreenName launchScreenName: String = "LaunchScreen",
         numberLogoAsSubview: Int = 0,
-        withComplection complection: @escaping ()->() = {}) {
+        withComplection complection: @escaping ()->() = {},
+        onWindow window: UIWindow) {
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let window = appDelegate.window!
         window.makeKeyAndVisible()
         let rootViewController = window.rootViewController!
         let launchScreenController = UIStoryboard.init(name: launchScreenName, bundle: nil).instantiateInitialViewController()!
@@ -140,10 +139,9 @@ extension SPLaunchAnimation {
         forLaunchScreenName launchScreenName: String = "LaunchScreen",
         numberLogoAsSubview: Int = 0,
         withIcon iconBezierPath: UIBezierPath,
-        withComplection complection: @escaping ()->() = {}) {
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let window = appDelegate.window!
+        withComplection complection: @escaping ()->() = {},
+        onWindow window: UIWindow) {
+
         window.makeKeyAndVisible()
         let rootViewController = window.rootViewController!
         let launchScreenController = UIStoryboard.init(name: launchScreenName, bundle: nil).instantiateInitialViewController()!

@@ -28,11 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //Simple func. It use LaunchScreen with name "LaunchScreen.stroryboard" for default. If on launchScreen many subviews (not one) - set numeric subviews "numberLogoAsSubview". Please, not use raster picture in image on launchScreen, you will see a bad mask when animation start. Use vector, ex. pdf. About the best option read on
-        //SPLaunchAnimation.asTwitter()
+        //SPLaunchAnimation.asTwitter(onWindow: self.window!)
         
         //It is func more difficult, but it looks perfect. You shoud set vector image in launchScreen and crete UIBezierPath identical you logo. When the animation starts - logo quietly replaced with bezierPath-variant and scale animation look perfect for any device. For ex. I create logoTwitter bezierPath-variant
         let twitterLogoBezierPath = SPBezierPathFigure.logoTwitter()
-        SPLaunchAnimation.asTwitter(withIcon: twitterLogoBezierPath)
+        SPLaunchAnimation.asTwitter(withIcon: twitterLogoBezierPath, onWindow: self.window!)
         
         return true
     }
