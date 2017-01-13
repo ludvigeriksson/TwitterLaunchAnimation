@@ -14,21 +14,21 @@ Drop in the Sparrow folder to your Xcode project (make sure to enable "Copy item
 
 Or via CocoaPods:
     
-    pod 'Sparrow/LaunchAnimation', :git => 'https://github.com/IvanVorobei/TwitterLaunchAnimation.git'
+    pod 'Sparrow/LaunchAnimation’, :git => 'https://github.com/IvanVorobei/Sparrow.git’
 
 ## How use
 Add line code in AppDelegate file:
 
-	SPLaunchAnimation.asTwitter()
+	SPLaunchAnimation.asTwitter(onWindow: self.window!)
 
 Realy simple? It use LaunchScreen with name "LaunchScreen.stroryboard" for default. If on launchScreen many subviews (not one) - set numeric subviews "numberLogoAsSubview" when call "asTwitter". Please, not use raster picture in image on launchScreen, you will see a bad mask when animation start. Use vector, ex. pdf
 
 or use 
 
 	let twitterLogoBezierPath = SPBezierPathFigure.logoTwitter()
-    SPLaunchAnimation.asTwitter(withIcon: twitterLogoBezierPath)
+    SPLaunchAnimation.asTwitter(withIcon: twitterLogoBezierPath, onWindow: self.window!)
 
-It is func more difficult, but it looks perfect. You shoud set vector image in launchScreen and crete UIBezierPath identical you logo. When the animation starts - logo quietly replaced with bezierPath-variant and scale animation look perfect for any device. For ex. you can find twitter logo in bezierPath-variant in project
+It is func more difficult, but it looks perfect. You shoud set vector image in launchScreen and crete UIBezierPath identical you logo. When the animation starts - logo quietly replaced with bezierPath-variant and scale animation look perfect for any device. For ex. you can find twitter logo in bezierPath-variant in project (not install with pods)
 
 ## Problems and advice
 Logo should vector. In animations used a large scale and problems of bitmap images - loss of quality with scale. I recomended use BezierPath, but if this is not possible - UIImage in pdf
@@ -42,7 +42,7 @@ I rec the screen of iPhone for the launch of the original animation and compared
 <img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - compare.gif" width="400">
 
 ## Other
-In the project you will find my library [Sparrow](https://github.com/IvanVorobei/Sparrow), it's what I use. But if needed, you can easily to remove it and do not use [Sparrow](https://github.com/IvanVorobei/Sparrow) in their projects 
+In the project, you can find my library [Sparrow](https://github.com/IvanVorobei/Sparrow). If you used CocoaPods - installed only a part of the library with launch animation. If you import files to a project as static library (drag and drop) - you can easily import files only for launch animation
 
 ## Frequently Asked Questions
 ![](/resources/twitter-launch-animation - frequently-asked-questions.png)

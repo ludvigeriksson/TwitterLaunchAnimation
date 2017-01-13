@@ -1,5 +1,5 @@
 // The MIT License (MIT)
-// Copyright © 2016 Ivan Vorobei (hello@ivanvorobei.by)
+// Copyright © 2017 Ivan Vorobei (hello@ivanvorobei.by)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
 
 import UIKit
 
-extension SPLaunchAnimation {
+public extension SPLaunchAnimation {
     
     private static let windowColor: UIColor = UIColor.black
     private static let animateDuration: TimeInterval = 1
@@ -61,10 +61,13 @@ extension SPLaunchAnimation {
             view.transform = CGAffineTransform(translationX: screenBounds.width * self.paralaxTranslationXCoef, y: 0)
         }
         
-        SPAnimationSpring.animate(
-            self.animateDuration,
+        UIView.animate(
+            withDuration: self.animateDuration,
+            delay: self.delay,
+            usingSpringWithDamping: 1.0,
+            initialSpringVelocity: 0.0,
+            options: [.curveEaseInOut],
             animations: {
-                
                 window.rootViewController?.view.frame.origin = CGPoint.zero
                 for view in rootViewControllerSubviews {
                     view.transform = CGAffineTransform.identity
@@ -73,16 +76,10 @@ extension SPLaunchAnimation {
                 for view in launchScreenViewSubviews {
                     view.transform = CGAffineTransform.init(translationX: -screenBounds.width * self.paralaxTranslationXCoef, y: 0)
                 }
-                
-                
-        }, delay: self.delay,
-           spring: 1.0,
-           velocity: 0.0,
-           options: [.curveEaseInOut],
-           withComplection: {
+        }, completion: {
             finished in
-                complection()
-                launchScreenView.removeFromSuperview()
+            complection()
+            launchScreenView.removeFromSuperview()
         })
     }
 }

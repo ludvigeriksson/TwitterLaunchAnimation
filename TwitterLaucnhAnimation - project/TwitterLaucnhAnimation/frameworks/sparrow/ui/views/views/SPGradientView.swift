@@ -1,5 +1,5 @@
 // The MIT License (MIT)
-// Copyright © 2016 Ivan Vorobei (hello@ivanvorobei.by)
+// Copyright © 2017 Ivan Vorobei (hello@ivanvorobei.by)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
 
 import UIKit
 
-class SPGradientView: UIView {
+public class SPGradientView: UIView {
     
     fileprivate var gradient: CAGradientLayer!
     
@@ -37,7 +37,7 @@ class SPGradientView: UIView {
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
     }
@@ -60,7 +60,7 @@ class SPGradientView: UIView {
         self.layer.insertSublayer(self.gradient!, at: 0)
     }
     
-    override func layoutSublayers(of layer: CALayer) {
+    override public func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
         self.gradient.frame = self.bounds
     }

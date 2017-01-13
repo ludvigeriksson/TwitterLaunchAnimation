@@ -1,5 +1,5 @@
 // The MIT License (MIT)
-// Copyright © 2016 Ivan Vorobei (hello@ivanvorobei.by)
+// Copyright © 2017 Ivan Vorobei (hello@ivanvorobei.by)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
 
 import UIKit
 
-class SPSegmentedControl: UIControl {
+public class SPSegmentedControl: UIControl {
     
     var indicatorView: UIView = UIView()
     var cells: [SPSegmentedControlCell] = []
@@ -84,7 +84,7 @@ class SPSegmentedControl: UIControl {
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
@@ -148,7 +148,7 @@ class SPSegmentedControl: UIControl {
         )
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
 
         if isRoundedFrame {
@@ -190,7 +190,7 @@ class SPSegmentedControl: UIControl {
         return Int(distances.index(of: distances.min()!)!)
     }
     
-    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+    override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let location = touch.location(in: self)
         var calculatedIndex : Int?
         for (index, cell) in cells.enumerated() {

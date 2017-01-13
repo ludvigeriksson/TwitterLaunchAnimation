@@ -1,5 +1,5 @@
 // The MIT License (MIT)
-// Copyright © 2016 Ivan Vorobei (hello@ivanvorobei.by)
+// Copyright © 2017 Ivan Vorobei (hello@ivanvorobei.by)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
 
 import UIKit
 
-class SPSegmentedControlCell: UIView {
+public class SPSegmentedControlCell: UIView {
     
     var imageView: UIImageView = UIImageView.init()
     var label: UILabel = UILabel()
@@ -50,7 +50,7 @@ class SPSegmentedControlCell: UIView {
         self.commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
     }
@@ -66,7 +66,7 @@ class SPSegmentedControlCell: UIView {
         self.addSubview(self.imageView)
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         label.frame = CGRect.zero
         imageView.frame = CGRect.zero

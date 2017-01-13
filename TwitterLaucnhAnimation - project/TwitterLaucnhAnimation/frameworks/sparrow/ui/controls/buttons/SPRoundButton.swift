@@ -1,21 +1,33 @@
+// The MIT License (MIT)
+// Copyright © 2017 Ivan Vorobei (hello@ivanvorobei.by)
 //
-//  RounderButton.swift
-//  reincarnation
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//  Created by Ivan Vorobei on 6/19/16.
-//  Copyright © 2016 Ivan Vorobei. All rights reserved.
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
 //
-
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 import UIKit
 
-class SPRoundButton: SPRoundFrameButton {
+public class SPRoundButton: SPRoundFrameButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
     }
@@ -27,14 +39,14 @@ class SPRoundButton: SPRoundFrameButton {
     }
 }
 
-class SPRoundLineButton: SPRoundFrameButton {
+public class SPRoundLineButton: SPRoundFrameButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
     }
@@ -51,9 +63,9 @@ class SPRoundLineButton: SPRoundFrameButton {
     }
 }
 
-class SPRoundFrameButton: UIButton {
+public class SPRoundFrameButton: UIButton {
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         let minSide = min(self.frame.width, self.frame.height)
         self.layer.cornerRadius = minSide / 2
