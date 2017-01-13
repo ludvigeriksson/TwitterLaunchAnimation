@@ -13,7 +13,8 @@ Xcode 8 and Swift 3. Ready for use ios8+
 Drop in the Sparrow folder to your Xcode project (make sure to enable "Copy items if needed" and "Create groups").
 
 Or via CocoaPods:
-	pod 'Sparrow/LaunchAnimation', :git => 'https://github.com/IvanVorobei/TwitterLaunchAnimation.git'
+    
+    pod 'Sparrow/LaunchAnimation', :git => 'https://github.com/IvanVorobei/TwitterLaunchAnimation.git'
 
 ## How use
 Add line code in AppDelegate file:
@@ -44,7 +45,7 @@ I rec the screen of iPhone for the launch of the original animation and compared
 In the project you will find my library [Sparrow](https://github.com/IvanVorobei/Sparrow), it's what I use. But if needed, you can easily to remove it and do not use [Sparrow](https://github.com/IvanVorobei/Sparrow) in their projects 
 
 ## Frequently Asked Questions
-![](/resources/twitter-launch-animation - frequently-asked-questions)
+![](/resources/twitter-launch-animation - frequently-asked-questions.png)
 
 ## License
 TwitterLaunchAnimation-project is released under the MIT license. See LICENSE.md for details.
@@ -58,4 +59,4 @@ TwitterLaunchAnimation-project is released under the MIT license. See LICENSE.md
 hello@ivanvorobei.by
 
 ## Support
-The project is fully free, I do not impose any restrictions on its use. I'm just like you - want to do useful things. If you have a desire to help - you can tell friends about the project or [http://ivanvorobei.by/donate](donate). Thank!
+The project is fully free, I do not impose any restrictions on its use. I'm just like you - want to do useful things. If you have a desire to help - you can tell friends about the project or [donate](http://hello.ivanvorobei.by). Thank!
