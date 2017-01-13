@@ -1,46 +1,61 @@
-![](/resources/twitter-launch-animation - baner.jpg)
+![](/resources/twitter-launch-animation - baner.png)
 
 ## About
-Project with launch animation of Twitter. On GitHub many projects, but this is very similar to the original animation
+Project with launch animation as Twitter. On GitHub many projects, but this is very similar to the original animation and you can use it your project very simple
 
 <img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - mockup_preview.gif" width="600">
 
+## Requires
+Xcode 8 and Swift 3. Ready for use ios8+
+
+## Integrate
+
+Drop in the Sparrow folder to your Xcode project (make sure to enable "Copy items if needed" and "Create groups").
+
+Or via CocoaPods:
+	pod 'Sparrow/LaunchAnimation', :git => 'https://github.com/IvanVorobei/TwitterLaunchAnimation.git'
+
 ## How use
-Add some lines code in AppDelegate file:
+Add line code in AppDelegate file:
+
+	SPLaunchAnimation.asTwitter()
+
+Realy simple? It use LaunchScreen with name "LaunchScreen.stroryboard" for default. If on launchScreen many subviews (not one) - set numeric subviews "numberLogoAsSubview" when call "asTwitter". Please, not use raster picture in image on launchScreen, you will see a bad mask when animation start. Use vector, ex. pdf
+
+or use 
 
 	let twitterLogoBezierPath = SPBezierPathFigure.logoTwitter()
-	SPLaunchAnimation.asTwitter(icon: twitterLogoBezierPath, onWindow: self.window!)
+    SPLaunchAnimation.asTwitter(withIcon: twitterLogoBezierPath)
 
-or 
+It is func more difficult, but it looks perfect. You shoud set vector image in launchScreen and crete UIBezierPath identical you logo. When the animation starts - logo quietly replaced with bezierPath-variant and scale animation look perfect for any device. For ex. you can find twitter logo in bezierPath-variant in project
 
-	let twitterLogoImage = UIImage.init(named: "twitter-logo")!
-	SPLaunchAnimation.asTwitter(icon: twitterLogoImage, onWindow: self.window!)
-
-You must pass the current window as a parameter to a function
+## Problems and advice
+Logo should vector. In animations used a large scale and problems of bitmap images - loss of quality with scale. I recomended use BezierPath, but if this is not possible - UIImage in pdf
 
 ## Realy Twitter Launсh animation?
 Twitter developers use intuitive animation: first, the logo is compressed further - increasing. To animation was look good should be used timing curves. But the standard curve did not give a result similar to the real laucnh animation. Experimentally, I've found the correct curve
 
-<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - compare.gif" width="400">
-
-## Problems and advice
-Logo located above the center axis and rootView resizes the end of the animation. So we had to do a lot of calculations. You can see it with your code.
-
-Logo should vector. In animations used a large scale and problems of bitmap images - loss of quality with scale. I recomended use BezierPath, but if this is not possible - UIImage in pdf
-
 ##  How I compared with original
 I rec the screen of iPhone for the launch of the original animation and compared frame with my project, correcting and adjusting values. I spent a week at the correction values
+
+<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - compare.gif" width="400">
 
 ## Other
 In the project you will find my library [Sparrow](https://github.com/IvanVorobei/Sparrow), it's what I use. But if needed, you can easily to remove it and do not use [Sparrow](https://github.com/IvanVorobei/Sparrow) in their projects 
 
+## Frequently Asked Questions
+![](/resources/twitter-launch-animation - frequently-asked-questions)
+
 ## License
 TwitterLaunchAnimation-project is released under the MIT license. See LICENSE.md for details.
 
-## Contact:
+## Contact
  
 [http://hello.ivanvorobei.by](http://hello.ivanvorobei.by)
 
 [http://ivanvorobei.by](http://hello.ivanvorobei.by)
 
 hello@ivanvorobei.by
+
+## Support
+The project is fully free, I do not impose any restrictions on its use. I'm just like you - want to do useful things. If you have a desire to help - you can tell friends about the project or [http://ivanvorobei.by/donate](donate). Thank!
