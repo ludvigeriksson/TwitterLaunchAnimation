@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/IvanVorobei/TwitterLaunchAnimation.git', :tag => s.version.to_s }
   s.requires_arc = true
   s.ios.deployment_target = '8.0'
-  s.source_files = 'TwitterLaucnhAnimation - project/TwitterLaucnhAnimation/frameworks/sparrow/launch/animation/*.swift'
+  s.source_files = 'TwitterLaucnhAnimation - project/TwitterLaucnhAnimation/frameworks/sparrow/launch/animation/*.{h,m}'
 end
