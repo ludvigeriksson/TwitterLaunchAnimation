@@ -1,53 +1,53 @@
 ![](/resources/twitter-launch-animation - baner.png)
 
 ## About
-Project with launch animation as Twitter. On GitHub many projects, but this is very similar to the original animation and you can use it your project very simple
+Twitter-like launchscreen animation. There are a lot of projects on Github with the same objective, but this one is very similar to the original animation and you can use it in your project in a very simple way
 
 <img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - mockup_preview.gif" width="600">
 
-## Requires
-Xcode 8 and Swift 3. Ready for use ios8+
+## Requirements
+Xcode 8 and Swift 3. Ready for use on iOS 8+
 
-## Integrate
+## Integration
 
-Drop in the Sparrow folder to your Xcode project (make sure to enable "Copy items if needed" and "Create groups").
+Drop in Sparrow folder to your Xcode project (make sure to enable "Copy items if needed" and "Create groups").
 
 Or via CocoaPods:
     
     pod 'Sparrow/LaunchAnimation’, :git => 'https://github.com/IvanVorobei/Sparrow.git’
 
-## How use
-Add line code in AppDelegate file:
+## How to use
+Add just one line of code in AppDelegate file:
 
 	SPLaunchAnimation.asTwitter(onWindow: self.window!)
 
-Realy simple? It use LaunchScreen with name "LaunchScreen.stroryboard" for default. If on launchScreen many subviews (not one) - set numeric subviews "numberLogoAsSubview" when call "asTwitter". Please, not use raster picture in image on launchScreen, you will see a bad mask when animation start. Use vector, ex. pdf
+Sounds really simple, doesn't it? It uses LaunchScreen with name "LaunchScreen.stroryboard" for default. If there are a lot of subviews on your launchscreen, set numeric subviews "numberLogoAsSubview" when call "asTwitter". Please, do not use raster picture on launchScreen, you will see freezing mask when the animation starts. Do use vector one, ex. pdf
 
 or use 
 
 	let twitterLogoBezierPath = SPBezierPathFigure.logoTwitter()
     SPLaunchAnimation.asTwitter(withIcon: twitterLogoBezierPath, onWindow: self.window!)
 
-It is func more difficult, but it looks perfect. You shoud set vector image in launchScreen and crete UIBezierPath identical you logo. When the animation starts - logo quietly replaced with bezierPath-variant and scale animation look perfect for any device. For ex. you can find twitter logo in bezierPath-variant in project (not install with pods)
+This way is more difficult, but it looks better. You should set vector image on the launchScreen and create UIBezierPath identical to you logo. When the animation starts - logo is quietly replaced with bezierPath-variant and scale-animation looks perfect on all devices. Just for example: you can find twitter logo in bezierPath-variant in the project(which is not installed with pods)
 
-## Problems and advice
-Logo should vector. In animations used a large scale and problems of bitmap images - loss of quality with scale. I recomended use BezierPath, but if this is not possible - UIImage in pdf
+## Problems and a piece of advice
+Do use vector logo. Raster images cause quality loss with large scaling. I recommend you to use BezierPath, but if it's not possible UIImage in pdf is a good alternative
 
-## Realy Twitter Launсh animation?
-Twitter developers use intuitive animation: first, the logo is compressed further - increasing. To animation was look good should be used timing curves. But the standard curve did not give a result similar to the real laucnh animation. Experimentally, I've found the correct curve
+## Is it real Twitter Launсh animation?
+Twitter developers use intuitive animation: firstly the logo is compressed, then it's enlargen. In order to make animation looks good, timing curves should be used. But the standard curve don't give the result similar to the real launch animation. Experimentally, I've found the correct curve
 
-##  How I compared with original
-I rec the screen of iPhone for the launch of the original animation and compared frame with my project, correcting and adjusting values. I spent a week at the correction values
+## Comparison with original
+I recorded the screen with the launch of the original animation and compared frame with my project, correcting and adjusting values. I spent a week on correcting the values
 
 <img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - compare.gif" width="400">
 
 ## Other
-In the project, you can find my library [Sparrow](https://github.com/IvanVorobei/Sparrow). If you used CocoaPods - installed only a part of the library with launch animation. If you import files to a project as static library (drag and drop) - you can easily import files only for launch animation
+In the project you can find my library [Sparrow](https://github.com/IvanVorobei/Sparrow). 
 
 ![](/resources/twitter-launch-animation - frequently-asked-questions.png)
 
 ## License
-TwitterLaunchAnimation-project is released under the MIT license. See LICENSE.md for details.
+TwitterLaunchAnimation-project is released under the MIT license. Check LICENSE.md for details.
 
 ## Contact
  
@@ -58,4 +58,4 @@ TwitterLaunchAnimation-project is released under the MIT license. See LICENSE.md
 hello@ivanvorobei.by
 
 ## Support
-The project is fully free, I do not impose any restrictions on its use. I'm just like you - want to do useful things. If you have a desire to help - you can tell friends about the project or [donate](http://ivanvorobei.by/donate). Thank!
+The project is fully free, I do not impose any restrictions on its use. I'm, just like you, want to do useful things. If you have a desire to help, tell friends about the project or [donate](http://ivanvorobei.by/donate). Thanks!
