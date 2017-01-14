@@ -44,7 +44,6 @@ I rec the screen of iPhone for the launch of the original animation and compared
 ## Other
 In the project, you can find my library [Sparrow](https://github.com/IvanVorobei/Sparrow). If you used CocoaPods - installed only a part of the library with launch animation. If you import files to a project as static library (drag and drop) - you can easily import files only for launch animation
 
-## Frequently Asked Questions
 ![](/resources/twitter-launch-animation - frequently-asked-questions.png)
 
 ## License
