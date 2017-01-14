@@ -21,17 +21,19 @@ Add just one line of code in AppDelegate file:
 
 	SPLaunchAnimation.asTwitter(onWindow: self.window!)
 
-Sounds really simple, doesn't it? It uses LaunchScreen with name "LaunchScreen.stroryboard" for default. If there are a lot of subviews on your launchscreen, set numeric subviews "numberLogoAsSubview" when call "asTwitter". Please, do not use raster picture on launchScreen, you will see freezing mask when the animation starts. Do use vector one, ex. pdf
+Really simple, doesn't it? It uses LaunchScreen with name "LaunchScreen.stroryboard" for default. If there are a lot of subviews on your launchScreen, set numeric subviews "numberLogoAsSubview" when call "asTwitter". Please, do not use raster picture on launchScreen, you will see freezing mask when the animation starts. Do use vector one, ex. pdf
 
 or use 
 
 	let twitterLogoBezierPath = SPBezierPathFigure.logoTwitter()
     SPLaunchAnimation.asTwitter(withIcon: twitterLogoBezierPath, onWindow: self.window!)
 
-This way is more difficult, but it looks better. You should set vector image on the launchScreen and create UIBezierPath identical to you logo. When the animation starts - logo is quietly replaced with bezierPath-variant and scale-animation looks perfect on all devices. Just for example: you can find twitter logo in bezierPath-variant in the project(which is not installed with pods)
+This way is more difficult, but it looks better. You should set vector image on the launchScreen and create UIBezierPath identical to you logo. When the animation starts - logo is quietly replaced with bezierPath-variant and scale-animation looks perfect on all devices. Just for example: you can find twitter logo in bezierPath-variant in the project (which is not installed with pods)
 
 ## Problems and a piece of advice
 Do use vector logo. Raster images cause quality loss with large scaling. I recommend you to use BezierPath, but if it's not possible UIImage in pdf is a good alternative
+
+![](/resources/twitter-launch-animation - frequently-asked-questions.png)
 
 ## Is it real Twitter Launсh animation?
 Twitter developers use intuitive animation: firstly the logo is compressed, then it's enlargen. In order to make animation looks good, timing curves should be used. But the standard curve don't give the result similar to the real launch animation. Experimentally, I've found the correct curve
@@ -44,10 +46,8 @@ I recorded the screen with the launch of the original animation and compared fra
 ## Other
 In the project you can find my library [Sparrow](https://github.com/IvanVorobei/Sparrow). 
 
-![](/resources/twitter-launch-animation - frequently-asked-questions.png)
-
 ## License
-TwitterLaunchAnimation-project is released under the MIT license. Check LICENSE.md for details.
+TwitterLaunchAnimation is released under the MIT license. Check LICENSE.md for details.
 
 ## Contact
  
