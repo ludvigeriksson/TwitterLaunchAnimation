@@ -44,6 +44,7 @@ I recorded the screen with the launch of the original animation and compared fra
 <img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - compare.gif" width="400">
 
 ## Other
+<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - powered-by-sparrow.png" width="200">
 In the project you can find my library [Sparrow](https://github.com/IvanVorobei/Sparrow). 
 
 ## License
