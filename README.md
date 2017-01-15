@@ -41,15 +41,15 @@ Twitter developers use intuitive animation: firstly the logo is compressed, then
 ## Comparison with original
 I recorded the screen with the launch of the original animation and compared frame with my project, correcting and adjusting values. I spent a week on correcting the values
 
-<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - compare.gif" width="400">
+<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation - compare.gif" width="400"> 
+
+## License
+TwitterLaunchAnimation is released under the MIT license. Check LICENSE.md for details
 
 ## Other
 ![](/resources/twitter-launch-animation - powered-by-sparrow.png)
 
-In the project you can find my library [Sparrow](https://github.com/IvanVorobei/Sparrow). 
-
-## License
-TwitterLaunchAnimation is released under the MIT license. Check LICENSE.md for details.
+In the project you can find my library [Sparrow](https://github.com/IvanVorobei/Sparrow). It’s a library with a full functionality. If you want to use only TwitterLaunchAnimation, you can easily delete extra files from library. All will work fine. If you install via CocoaPods, only necessary files will be installed
 
 ## Contact
  
