@@ -1,4 +1,4 @@
-![](/resources/twitter-launch-animation - baner.png)
+![](/resources/twitter-launch-animation_baner.png)
 
 ## About
 Twitter-like launchscreen animation. There are a lot of projects on Github with the same objective, but this one is very similar to the original animation and you can use it in your project in a very simple way
