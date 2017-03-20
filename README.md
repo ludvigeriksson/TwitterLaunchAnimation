@@ -3,7 +3,7 @@
 ## About
 Twitter-like launchscreen animation. There are a lot of projects on Github with the same objective, but this one is very similar to the original animation and you can use it in your project in a very simple way
 
-<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation-mockup_preview.gif" width="600">
+<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation-mockup-preview.gif" width="600">
 
 ## Requirements
 Xcode 8 and Swift 3. Ready for use on iOS 8+
