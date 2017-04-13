@@ -1,9 +1,9 @@
-![](/resources/twitter-launch-animation_baner.png)
+<img src="https://cdn.rawgit.com/IvanVorobei/TwitterLaunchAnimation/df1b7c27/resources/twitter-launch-animation_baner.svg">
 
 ## About
 Twitter-like launchscreen animation. There are a lot of projects on Github with the same objective, but this one is very similar to the original animation and you can use it in your project in a very simple way
 
-<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation_mockup-preview.gif" width="600">
+<img src="https://cdn.rawgit.com/IvanVorobei/TwitterLaunchAnimation/df1b7c27/resources/twitter-launch-animation_mockup-preview.gif" width="600">
 
 ## Requirements
 Xcode 8 and Swift 3. Ready for use on iOS 8+
@@ -33,7 +33,7 @@ This way is more difficult, but it looks better. You should set vector image on 
 ## Problems and a piece of advice
 Do use vector logo. Raster images cause quality loss with large scaling. I recommend you to use BezierPath, but if it's not possible UIImage in pdf is a good alternative
 
-![](/resources/twitter-launch-animation_frequently-asked-questions.png)
+<img src="https://cdn.rawgit.com/IvanVorobei/TwitterLaunchAnimation/df1b7c27/resources/twiiter-launch-animation_questions.png"> 
 
 ## Is it real Twitter Launсh animation?
 Twitter developers use intuitive animation: firstly the logo is compressed, then it's enlargen. In order to make animation looks good, timing curves should be used. But the standard curve don't give the result similar to the real launch animation. Experimentally, I've found the correct curve
@@ -41,21 +41,21 @@ Twitter developers use intuitive animation: firstly the logo is compressed, then
 ## Comparison with original
 I recorded the screen with the launch of the original animation and compared frame with my project, correcting and adjusting values. I spent a week on correcting the values
 
-<img src="https://raw.githubusercontent.com/IvanVorobei/TwitterLaunchAnimation/master/resources/twitter-launch-animation_compare.gif" width="400"> 
+<img src="https://cdn.rawgit.com/IvanVorobei/TwitterLaunchAnimation/df1b7c27/resources/twitter-launch-animation_compare.gif" width="400"> 
 
 ## License
 TwitterLaunchAnimation is released under the MIT license. Check LICENSE.md for details
 
 ## Other
-![](/resources/twitter-launch-animation_powered-by-sparrow.png)
+<img src="https://cdn.rawgit.com/IvanVorobei/TwitterLaunchAnimation/df1b7c27/resources/powered_by_sparrow.svg"> 
 
 In the project you can find my library [Sparrow](https://github.com/IvanVorobei/Sparrow). It’s a library with a full functionality. If you want to use only TwitterLaunchAnimation, you can easily delete extra files from library. All will work fine. If you install via CocoaPods, only necessary files will be installed
 
 ## Contact
  
-[http://hello.ivanvorobei.by](http://hello.ivanvorobei.by)
+[https://hello.ivanvorobei.by](https://hello.ivanvorobei.by)
 
-[http://ivanvorobei.by](http://hello.ivanvorobei.by)
+[https://ivanvorobei.by](https://hello.ivanvorobei.by)
 
 hello@ivanvorobei.by
 
