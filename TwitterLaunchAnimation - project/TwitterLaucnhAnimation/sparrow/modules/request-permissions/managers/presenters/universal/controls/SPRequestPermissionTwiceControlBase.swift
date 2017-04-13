@@ -21,18 +21,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+public protocol SPRequestPermissionTwiceControlInterface {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
-        }
-    }
+    var permission: SPRequestPermissionType {get set}
+    
+    func setNormalState(animated: Bool)
+    
+    func setSelectedState(animated: Bool)
+    
+    func addAction(_ target: Any?, action: Selector)
+    
+    func addAsSubviewTo(_ view: UIView)
 }
+
 

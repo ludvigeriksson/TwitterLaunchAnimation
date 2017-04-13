@@ -21,18 +21,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+extension UIScreen {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
-        }
+    class func getMinSideSize() -> CGFloat {
+        return min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+    }
+    
+    class func widthLessThanLength() -> Bool {
+        return UIScreen.main.bounds.width < UIScreen.main.bounds.height
     }
 }
-

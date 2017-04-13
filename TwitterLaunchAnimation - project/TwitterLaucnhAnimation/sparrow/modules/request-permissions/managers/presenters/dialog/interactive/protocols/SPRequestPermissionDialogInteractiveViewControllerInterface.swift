@@ -21,18 +21,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+protocol SPRequestPermissionDialogInteractiveViewControllerInterface {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
-        }
-    }
+    var presenterDelegate: SPRequestPermissionDialogInteractivePresenterDelegate? {get set}
+    
+    func present(on viewController: UIViewController)
+    
+    func hide()
+    
+    func addControl(_ control: SPRequestPermissionTwiceControlInterface)
+    
+    //MARK: Data
+    func setHeaderBackgroundView(_ view: UIView)
+    func setHeaderTitle(_ title: String)
+    func setHeaderSubtitle(_ title: String)
+    func setTopTitle(_ title: String)
+    func setBottomTitle(_ title: String)
+    func setUnderDialogTitle(_ title: String)
 }
-

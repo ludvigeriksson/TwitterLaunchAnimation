@@ -21,18 +21,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+public protocol SPRequestPermissionDialogInteractiveDataSourceInterface {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
-        }
-    }
+    func iconForNormalPermissionControl(_ permission: SPRequestPermissionType) -> UIImage
+    func iconForAllowedPermissionControl(_ permission: SPRequestPermissionType) -> UIImage
+    func titleForPermissionControl(_ permission: SPRequestPermissionType) -> String
+    
+    func headerBackgroundView() -> UIView
+    
+    func headerTitle() -> String
+    func headerSubtitle() -> String
+    
+    func topAdviceTitle() -> String
+    func bottomAdviceTitle() -> String
+    
+    func underDialogAdviceTitle() -> String
+    
+    func mainColor() -> UIColor
+    func secondColor() -> UIColor
 }
-

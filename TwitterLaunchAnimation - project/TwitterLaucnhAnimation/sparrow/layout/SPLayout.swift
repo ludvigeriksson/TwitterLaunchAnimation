@@ -21,18 +21,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+class SPLayout {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
+    static func sizeWith(widthFactor: CGFloat, maxWidth: CGFloat, heightFactor: CGFloat, maxHeight: CGFloat, relativeSideFactor: CGFloat, from relativeSize: CGSize) -> CGSize {
+        
+        var widthArea = relativeSize.width * widthFactor
+        var heightArea = relativeSize.height * heightFactor
+        
+        widthArea.setIfMore(when: maxWidth)
+        heightArea.setIfMore(when: maxHeight)
+        
+        var prepareWidth = widthArea
+        var prepareHeight = widthArea / relativeSideFactor
+        if prepareHeight > heightArea {
+            prepareHeight = heightArea
+            prepareWidth = heightArea * relativeSideFactor
         }
+        return CGSize.init(width: prepareWidth, height: prepareHeight)
     }
+    
 }
-

@@ -21,18 +21,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+struct SPDeviceOrientation {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
+    static func isPortraitOrienation() -> Bool {
+        var isPortraitOrientation = true
+        if UIDevice.current.orientation.isValidInterfaceOrientation {
+            if UIDevice.current.orientation.isPortrait {
+                isPortraitOrientation = true
+            } else {
+                isPortraitOrientation = false
+            }
         } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
+            if UIScreen.main.bounds.width < UIScreen.main.bounds.height {
+                isPortraitOrientation = true
+            } else {
+                isPortraitOrientation = false
+            }
         }
+        return isPortraitOrientation
     }
 }
-

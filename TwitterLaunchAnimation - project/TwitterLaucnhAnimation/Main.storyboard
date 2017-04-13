@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zny-Kv-1Qg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zny-Kv-1Qg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +20,29 @@
                     <view key="view" contentMode="scaleToFill" id="vrW-eY-w2B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen-iphone" translatesAutoresizingMaskIntoConstraints="NO" id="CcK-kN-1gl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Oel-YS-Rch" firstAttribute="top" secondItem="CcK-kN-1gl" secondAttribute="bottom" id="S03-cZ-RUd"/>
+                            <constraint firstItem="CcK-kN-1gl" firstAttribute="leading" secondItem="vrW-eY-w2B" secondAttribute="leading" id="cfX-dj-Lf7"/>
+                            <constraint firstAttribute="trailing" secondItem="CcK-kN-1gl" secondAttribute="trailing" id="iEc-oG-JTZ"/>
+                            <constraint firstItem="CcK-kN-1gl" firstAttribute="top" secondItem="vrW-eY-w2B" secondAttribute="top" id="n9B-9n-qWo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="screenImageView" destination="CcK-kN-1gl" id="p2O-Rv-Zfv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tf4-om-AxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="98"/>
+            <point key="canvasLocation" x="-148" y="97.601199400299862"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="screen-iphone" width="750" height="1334"/>
+    </resources>
 </document>

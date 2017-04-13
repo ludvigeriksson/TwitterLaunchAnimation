@@ -21,18 +21,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+extension NSLayoutConstraint {
 
-    @IBOutlet weak var screenImageView: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
-        }
+    func setMultiplier(multiplier:CGFloat) -> NSLayoutConstraint {
+        NSLayoutConstraint.deactivate([self])
+        let newConstraint = NSLayoutConstraint(
+            item: firstItem,
+            attribute: firstAttribute,
+            relatedBy: relation,
+            toItem: secondItem,
+            attribute: secondAttribute,
+            multiplier: multiplier,
+            constant: constant)
+        
+        newConstraint.priority = priority
+        newConstraint.shouldBeArchived = self.shouldBeArchived
+        newConstraint.identifier = self.identifier
+        
+        NSLayoutConstraint.activate([newConstraint])
+        return newConstraint
     }
 }
-

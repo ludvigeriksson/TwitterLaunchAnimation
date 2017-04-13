@@ -21,18 +21,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+extension SPRequestPermissionData {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
+    struct colors {
+        
+        static func mainColor() -> UIColor {
+            return UIColor.init(hex: "#27AEE8")
+        }
+        
+        static func secondColor() -> UIColor {
+            return UIColor.white
+        }
+        
+        struct gradient {
+            
+            struct dark {
+                static func lightColor() -> UIColor {
+                    return UIColor.init(hex: "#171C1E")
+                }
+                
+                static func darkColor() -> UIColor {
+                    return UIColor.init(hex: "#000000")
+                }
+            }
         }
     }
 }
-

@@ -21,18 +21,38 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+extension UIBezierPath {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
+    func resizeTo(width: CGFloat) {
+        let currentWidth = self.bounds.width
+        let relativeFactor = width / currentWidth
+        self.apply(CGAffineTransform(scaleX: relativeFactor, y: relativeFactor))
+    }
+    
+    func convertToImage(fill: Bool, stroke: Bool, color: UIColor = .black) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: self.bounds.width, height: self.bounds.height), false, 0.0)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setStrokeColor(color.cgColor)
+        context!.setFillColor(color.cgColor)
+        if stroke {
+            self.stroke()
         }
+        if fill {
+           self.fill()
+        }
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
     }
 }
 
+public struct SPBezierPath {
+    
+    public static func setContext() {
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 1, height: 1), false, 0)
+    }
+    
+    public static func endContext() {
+        UIGraphicsEndImageContext()
+    }
+}

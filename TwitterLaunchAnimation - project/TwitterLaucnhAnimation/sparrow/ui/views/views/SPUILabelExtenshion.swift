@@ -21,18 +21,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+public extension UILabel {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
-        }
+    func setShadowOffsetForLetters(blurRadius: CGFloat = 0, widthOffset: CGFloat = 0, heightOffset: CGFloat, opacity: CGFloat) {
+        self.layer.shadowRadius = blurRadius
+        self.layer.shadowOffset = CGSize(
+            width: widthOffset,
+            height: heightOffset
+        )
+        self.layer.shadowOpacity = Float(opacity)
+    }
+    
+    func setShadowOffsetFactorForLetters(blurRadius: CGFloat = 0, widthOffsetFactor: CGFloat = 0, heightOffsetFactor: CGFloat, opacity: CGFloat) {
+        let widthOffset = widthOffsetFactor * self.frame.width
+        let heightOffset = heightOffsetFactor * self.frame.height
+        self.setShadowOffsetForLetters(blurRadius: blurRadius, widthOffset: widthOffset, heightOffset: heightOffset, opacity: opacity)
+    }
+    
+    func setCenteringAlignment() {
+        self.textAlignment = .center
+        self.baselineAdjustment = .alignCenters
     }
 }
-

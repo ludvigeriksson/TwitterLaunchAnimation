@@ -21,18 +21,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+public protocol SPRequestPermissionAssistantInterface {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
-        }
-    }
+    var eventsDelegate: SPRequestPermissionEventsDelegate? {get set}
+    
+    func present(on viewController: UIViewController)
+    
+    func isAllowPermission(_ permission: SPRequestPermissionType) -> Bool
+    
+    func isAllowPermissions() -> Bool
 }
-

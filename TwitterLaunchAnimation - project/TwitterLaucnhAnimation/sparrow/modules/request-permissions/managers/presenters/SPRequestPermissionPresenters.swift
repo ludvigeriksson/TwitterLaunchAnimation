@@ -19,20 +19,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var screenImageView: UIImageView!
+public struct SPRequestPermissionPresenters {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if UIDevice.current.isIphone() {
-            screenImageView.image = UIImage.init(named: "screen-iphone")
-        } else {
-            screenImageView.image = UIImage.init(named: "screen-ipad")
+    public struct dialog {
+        
+        public struct interactive {
+            
+            static func create(dataSource: SPRequestPermissionDialogInteractiveDataSourceInterface) -> SPRequestPermissionPresenterInterface {
+                let dialogView = SPRequestPermissionDialogInteractiveView.init()
+                let viewController = SPRequestPermissionDialogInteractiveViewController(dialogView: dialogView)
+                let presenter = SPRequestPermissionDialogInteractivePresenter.init(
+                    viewController: viewController,
+                    dataSource: dataSource
+                )
+                return presenter
+            }
         }
     }
+    
+    public struct native {
+        
+        static func create() -> SPRequestPermissionPresenterInterface {
+            let presenter = SPRequestPermissionNativePresenter()
+            return presenter
+        }
+    }
+    
+    public struct banner {}
 }
-
