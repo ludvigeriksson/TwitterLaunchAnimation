@@ -15,14 +15,14 @@ Drop in Sparrow folder to your Xcode project (make sure to enable "Copy items if
 Or via CocoaPods:
     
 ```ruby
-    pod 'Sparrow/LaunchAnimation’, :git => 'https://github.com/IvanVorobei/Sparrow.git’
+pod 'Sparrow/LaunchAnimation’, :git => 'https://github.com/IvanVorobei/Sparrow.git’
 ```
 
 ## How to use
 Add just one line of code in AppDelegate file:
 
 ```swift
-	SPLaunchAnimation.asTwitter(onWindow: self.window!)
+SPLaunchAnimation.asTwitter(onWindow: self.window!)
 ```
 
 Really simple, doesn't it? It uses LaunchScreen with name "LaunchScreen.stroryboard" for default. If there are a lot of subviews on your launchScreen, set numeric subviews "numberLogoAsSubview" when call "asTwitter". Please, do not use raster picture on launchScreen, you will see freezing mask when the animation starts. Do use vector one, ex. pdf
@@ -30,8 +30,8 @@ Really simple, doesn't it? It uses LaunchScreen with name "LaunchScreen.strorybo
 or use 
 
 ```swift
-	let twitterLogoBezierPath = SPBezierPathFigure.logoTwitter()
-    SPLaunchAnimation.asTwitter(withIcon: twitterLogoBezierPath, onWindow: self.window!)
+let twitterLogoBezierPath = SPBezierPathFigure.logoTwitter()
+SPLaunchAnimation.asTwitter(withIcon: twitterLogoBezierPath, onWindow: self.window!)
 ```
 
 This way is more difficult, but it looks better. You should set vector image on the launchScreen and create UIBezierPath identical to you logo. When the animation starts - logo is quietly replaced with bezierPath-variant and scale-animation looks perfect on all devices. Just for example: you can find twitter logo in bezierPath-variant in the project (which is not installed with pods)
