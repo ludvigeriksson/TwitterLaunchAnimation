@@ -54,11 +54,15 @@ public extension SPLaunchAnimation {
         let launchScreenController = UIStoryboard.init(name: launchScreenName, bundle: nil).instantiateInitialViewController()!
         let backgroundColor = launchScreenController.view.backgroundColor!
         window.backgroundColor = backgroundColor
-        
+
+        launchScreenController.view.setNeedsLayout()
+        launchScreenController.view.layoutIfNeeded()
+
         let logoImageView = launchScreenController.view.subviews[numberLogoAsSubview] as! UIImageView
-        let logoSideSize = logoImageView.frame.width
+        let logoSideWidth = logoImageView.frame.width
+        let logoSideHeight = logoImageView.frame.height
         let yPositionTranslateFactor: CGFloat = logoImageView.center.y / (launchScreenController.view.frame.height / 2)
-        
+
         let gradeView = UIView.init(frame: rootViewController.view.frame)
         gradeView.backgroundColor = UIColor.white
         rootViewController.view.addSubview(gradeView)
@@ -70,8 +74,8 @@ public extension SPLaunchAnimation {
         maskLayer.bounds = CGRect.init(
             x: 0,
             y: 0,
-            width: logoSideSize / scaleFactorRootView,
-            height: logoSideSize / scaleFactorRootView
+            width: logoSideWidth / scaleFactorRootView,
+            height: logoSideHeight / scaleFactorRootView
         )
         let space: CGFloat = (rootViewController.view.frame.height - UIScreen.main.bounds.height) / 2 / scaleFactorRootView
         let centerDisplay: CGFloat = UIScreen.main.bounds.height / 2
@@ -147,33 +151,38 @@ public extension SPLaunchAnimation {
         let launchScreenController = UIStoryboard.init(name: launchScreenName, bundle: nil).instantiateInitialViewController()!
         let backgroundColor = launchScreenController.view.backgroundColor!
         window.backgroundColor = backgroundColor
-        
+
+        launchScreenController.view.setNeedsLayout()
+        launchScreenController.view.layoutIfNeeded()
+
         let logoImageView = launchScreenController.view.subviews[numberLogoAsSubview] as! UIImageView
-        let logoSideSize = logoImageView.frame.width
+        let logoSideWidth = logoImageView.frame.width
+        let logoSideHeight = logoImageView.frame.height
+
         let yPositionTranslateFactor: CGFloat = logoImageView.center.y / (launchScreenController.view.frame.height / 2)
-        
+
         let gradeView = UIView.init(frame: rootViewController.view.frame)
         gradeView.backgroundColor = UIColor.white
         rootViewController.view.addSubview(gradeView)
-        
+
         rootViewController.view.transform = CGAffineTransform.init(scaleX: scaleFactorRootView, y: scaleFactorRootView)
-        
-        let logoScaleFactor = logoSideSize / scaleFactorRootView / iconBezierPath.bounds.width
+
+        let logoScaleFactor = logoSideWidth / scaleFactorRootView / iconBezierPath.bounds.width
         let logoScaleTransform = CGAffineTransform.init(
             scaleX: logoScaleFactor,
             y: logoScaleFactor
         )
         iconBezierPath.apply(logoScaleTransform)
-        
-        let logoTranslationY = (logoSideSize / scaleFactorRootView - iconBezierPath.bounds.height) / 2
+
+        let logoTranslationY = (logoSideHeight / scaleFactorRootView - iconBezierPath.bounds.height) / 2
         let logoTranslationYTransform = CGAffineTransform.init(
             translationX: 0,
             y: logoTranslationY
         )
         iconBezierPath.apply(logoTranslationYTransform)
-        
+
         let maskLayer = CAShapeLayer()
-        maskLayer.frame = CGRect.init(x: 0, y: 0, width: logoSideSize / scaleFactorRootView, height: logoSideSize / scaleFactorRootView)
+        maskLayer.frame = CGRect.init(x: 0, y: 0, width: logoSideWidth / scaleFactorRootView, height: logoSideHeight / scaleFactorRootView)
         maskLayer.path = iconBezierPath.cgPath
         maskLayer.fillColor = UIColor.blue.cgColor
         maskLayer.backgroundColor = UIColor.clear.cgColor
@@ -181,24 +190,24 @@ public extension SPLaunchAnimation {
             x: (window.bounds.width / 2) - (maskLayer.bounds.width / 2),
             y: ((window.bounds.height / 2) - (maskLayer.bounds.height / 2)) * yPositionTranslateFactor
         )
-        
+
         rootViewController.view.layer.addSublayer(maskLayer)
         rootViewController.view.layer.mask = maskLayer
-        
+
         let initialScale = NSValue(caTransform3D:
             CATransform3DScale(rootViewController.view.layer.mask!.transform, 1, 1, 1)
         )
-        
+
         let secondScale = NSValue(caTransform3D:
             CATransform3DScale(rootViewController.view.layer.mask!.transform, self.scaleLogoFactor, self.scaleLogoFactor, 1)
         )
-        
+
         let scale = UIScreen.main.bounds.height / (rootViewController.view.layer.mask!.bounds.height / 3) * scaleMaskInEndFactor
         let finalScale = NSValue(caTransform3D:
             CATransform3DScale(
                 rootViewController.view.layer.mask!.transform, scale, scale, 1)
         )
-        
+
         let scaleAnimation = CAKeyframeAnimation.init(keyPath: "transform.scale")
         scaleAnimation.values = [initialScale, secondScale, finalScale]
         scaleAnimation.keyTimes = [0, changeAnimationFactor, 1]
@@ -212,7 +221,7 @@ public extension SPLaunchAnimation {
             self.scalingToFrontTimingFunction
         ]
         rootViewController.view.layer.mask?.add(scaleAnimation, forKey: "maskScaleAnimation")
-        
+
         UIView.animate(
             withDuration: self.durationHidyingGradeView,
             delay: self.delayHidyingGradeView,
@@ -223,7 +232,7 @@ public extension SPLaunchAnimation {
             finished in
             gradeView.removeFromSuperview()
         })
-        
+
         UIView.animate(
             withDuration: self.durationScalingRootView,
             delay: self.delayScalingRootView,
